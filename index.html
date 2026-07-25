@@ -16,62 +16,62 @@
   }
 
   :root {
-    --bg: #F5FAFF;
-    --bg-alt: #FFFFFF;
-    --ink: #1B2A3A;
-    --ink-soft: #5C7186;
-    --field: #2E9BD6;
-    --field-deep: #1C6FA8;
-    --accent: #FF7A33;
-    --accent-ink: #8A3A00;
-    --chalk: #E3A400;
-    --line: rgba(27, 42, 58, 0.12);
-    --card-shadow: 0 1px 2px rgba(27, 42, 58, 0.05), 0 12px 24px -12px rgba(27, 42, 58, 0.16);
+    --bg: #FFFFFF;
+    --bg-alt: #F7F8FB;
+    --ink: #1B2D6B;
+    --ink-soft: #5C6478;
+    --field: #16A6C4;
+    --field-deep: #0E5E85;
+    --accent: #2F6FE0;
+    --accent-ink: #16327A;
+    --chalk: #FF9E1F;
+    --line: rgba(27, 45, 107, 0.12);
+    --card-shadow: 0 1px 2px rgba(27, 45, 107, 0.05), 0 12px 24px -12px rgba(27, 45, 107, 0.16);
     color-scheme: light;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #16232E;
-      --bg-alt: #1D2E3B;
-      --ink: #EAF3FA;
-      --ink-soft: #A9BAC7;
-      --field: #4FB3E8;
-      --field-deep: #123044;
-      --accent: #FF8A4D;
-      --accent-ink: #FFDCC0;
-      --chalk: #FFD666;
-      --line: rgba(234, 243, 250, 0.14);
-      --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 16px 28px -14px rgba(0, 0, 0, 0.45);
+      --bg: #0E1A2B;
+      --bg-alt: #15243A;
+      --ink: #EAF2FF;
+      --ink-soft: #A7B7CE;
+      --field: #22C6D6;
+      --field-deep: #0B4750;
+      --accent: #6C93FF;
+      --accent-ink: #DCE6FF;
+      --chalk: #FFB84D;
+      --line: rgba(234, 242, 255, 0.14);
+      --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 28px -14px rgba(0, 0, 0, 0.5);
       color-scheme: dark;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #16232E;
-    --bg-alt: #1D2E3B;
-    --ink: #EAF3FA;
-    --ink-soft: #A9BAC7;
-    --field: #4FB3E8;
-    --field-deep: #123044;
-    --accent: #FF8A4D;
-    --accent-ink: #FFDCC0;
-    --chalk: #FFD666;
-    --line: rgba(234, 243, 250, 0.14);
-    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 16px 28px -14px rgba(0, 0, 0, 0.45);
+    --bg: #0E1A2B;
+    --bg-alt: #15243A;
+    --ink: #EAF2FF;
+    --ink-soft: #A7B7CE;
+    --field: #22C6D6;
+    --field-deep: #0B4750;
+    --accent: #6C93FF;
+    --accent-ink: #DCE6FF;
+    --chalk: #FFB84D;
+    --line: rgba(234, 242, 255, 0.14);
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 28px -14px rgba(0, 0, 0, 0.5);
     color-scheme: dark;
   }
   :root[data-theme="light"] {
-    --bg: #F5FAFF;
-    --bg-alt: #FFFFFF;
-    --ink: #1B2A3A;
-    --ink-soft: #5C7186;
-    --field: #2E9BD6;
-    --field-deep: #1C6FA8;
-    --accent: #FF7A33;
-    --accent-ink: #8A3A00;
-    --chalk: #E3A400;
-    --line: rgba(27, 42, 58, 0.12);
-    --card-shadow: 0 1px 2px rgba(27, 42, 58, 0.05), 0 12px 24px -12px rgba(27, 42, 58, 0.16);
+    --bg: #FFFFFF;
+    --bg-alt: #F7F8FB;
+    --ink: #1B2D6B;
+    --ink-soft: #5C6478;
+    --field: #16A6C4;
+    --field-deep: #0E5E85;
+    --accent: #2F6FE0;
+    --accent-ink: #16327A;
+    --chalk: #FF9E1F;
+    --line: rgba(27, 45, 107, 0.12);
+    --card-shadow: 0 1px 2px rgba(27, 45, 107, 0.05), 0 12px 24px -12px rgba(27, 45, 107, 0.16);
     color-scheme: light;
   }
 
@@ -152,24 +152,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4.25rem;
+    height: 5rem;
     gap: 1.5rem;
   }
   .brand {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--ink);
     white-space: nowrap;
   }
   .brand-mark {
-    width: 30px; height: 30px; flex: none;
+    width: 52px; height: 52px; flex: none;
+    border-radius: 50%;
+    object-fit: cover;
   }
-  .brand b { color: var(--accent); font-weight: inherit; }
   .nav-links {
     display: flex;
     gap: 2rem;
@@ -232,13 +230,37 @@
     margin: 0;
   }
 
-  /* ---------- PROGRAMS ---------- */
-  .programs { background: var(--bg-alt); }
+  /* ---------- CARDS / ACTIVITIES ---------- */
+  .activities { background: var(--bg-alt); }
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
     gap: 1.25rem;
   }
+  .activity-grid { grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); }
+  .activity-card {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 1.75rem 1.25rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.85rem;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .activity-card:hover { transform: translateY(-4px); }
+  .activity-card-more { color: var(--ink-soft); }
+  .activity-icon {
+    width: 3.4rem; height: 3.4rem;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--field) 14%, transparent);
+    color: var(--field);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .activity-card h3 { font-size: 1.3rem; }
   .sport-card {
     background: var(--bg);
     border: 1px solid var(--line);
@@ -251,17 +273,6 @@
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .sport-card:hover { transform: translateY(-4px); }
-  .jersey {
-    width: 3.4rem; height: 3.4rem;
-    border-radius: 50%;
-    background: var(--field);
-    color: #fff;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.5rem;
-    flex: none;
-    font-variant-numeric: tabular-nums;
-  }
   .sport-card h3 { font-size: 1.55rem; }
   .sport-meta {
     display: flex;
@@ -304,74 +315,61 @@
     font-size: 0.95rem;
     border-top: 1px solid rgba(234,243,250,0.12);
     font-variant-numeric: tabular-nums;
+    color: #EAF3FA;
   }
   tbody td:first-child { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; letter-spacing: 0.02em; color: var(--chalk); }
   tbody tr:hover { background: rgba(234,243,250,0.05); }
 
   /* ---------- PRICING ---------- */
-  .pricing-grid {
+  .price-board { margin-bottom: 1.75rem; }
+  .price-board tbody tr:last-child td { font-weight: 800; }
+  .price-notes {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1.25rem;
-    align-items: stretch;
+    margin-bottom: 2rem;
   }
-  .plan {
+  .price-note {
     background: var(--bg-alt);
     border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+    border-radius: 18px;
+    padding: 1.5rem 1.75rem;
   }
-  .plan.featured {
-    background: var(--field);
-    color: #fff;
-    border-color: transparent;
-    box-shadow: 0 20px 40px -18px color-mix(in srgb, var(--field) 70%, transparent);
-    position: relative;
-  }
-  .plan.featured .eyebrow, .plan.featured .eyebrow::before { color: var(--chalk); background: var(--chalk); }
-  .plan-tag {
-    position: absolute; top: -0.9rem; right: 1.5rem;
-    background: var(--chalk); color: var(--field-deep);
-    font-size: 0.7rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
-    padding: 0.4rem 0.8rem; border-radius: 999px;
-  }
-  .plan h3 { font-size: 1.6rem; }
-  .price { display: flex; align-items: baseline; gap: 0.35rem; }
-  .price b { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; font-variant-numeric: tabular-nums; }
-  .price span { color: var(--ink-soft); font-size: 0.85rem; }
-  .plan.featured .price span { color: color-mix(in srgb, #fff 75%, transparent); }
-  .plan ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; flex: 1; }
-  .plan li { display: flex; gap: 0.6rem; align-items: flex-start; }
-  .plan li svg { flex: none; margin-top: 0.2rem; }
-  .plan .btn { justify-content: center; margin-top: 0.25rem; }
+  .price-note h3 { font-size: 1.25rem; margin-bottom: 0.85rem; }
+  .price-note ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.92rem; color: var(--ink-soft); }
+  .price-note li { display: flex; gap: 0.6rem; align-items: flex-start; }
+  .price-note li svg { flex: none; margin-top: 0.2rem; color: var(--field); }
+  .price-cta { display: flex; justify-content: center; }
 
   /* ---------- COACH ---------- */
   .coach { background: var(--bg-alt); }
-  .coach-inner {
+  .coach-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
-    gap: clamp(2rem, 6vw, 4rem);
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: clamp(2rem, 5vw, 3.5rem);
+  }
+  .coach-person {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    gap: 1.5rem;
     align-items: center;
   }
   .monogram {
-    width: clamp(9rem, 20vw, 13rem);
+    width: clamp(6.5rem, 14vw, 8.5rem);
     aspect-ratio: 1;
     border-radius: 50%;
     background: linear-gradient(155deg, var(--field), var(--field-deep));
     color: #fff;
     display: flex; align-items: center; justify-content: center;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(4rem, 9vw, 6rem);
+    font-size: clamp(2.75rem, 6vw, 3.75rem);
     box-shadow: var(--card-shadow);
     justify-self: center;
   }
-  .coach-copy h3 { font-size: clamp(1.9rem, 4vw, 2.5rem); }
-  .coach-role { color: var(--accent); font-weight: 800; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 0.4rem; }
-  .coach-copy p.bio { margin-top: 1.1rem; color: var(--ink-soft); max-width: 34rem; }
-  .credentials { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; font-size: 0.92rem; }
+  .coach-copy h3 { font-size: clamp(1.5rem, 3vw, 1.9rem); }
+  .coach-role { color: var(--accent); font-weight: 800; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 0.3rem; }
+  .coach-copy p.bio { margin-top: 0.9rem; color: var(--ink-soft); font-size: 0.92rem; }
+  .credentials { list-style: none; margin: 1.1rem 0 0; padding: 0; display: grid; gap: 0.5rem; font-size: 0.85rem; }
   .credentials li { display: flex; gap: 0.6rem; align-items: flex-start; }
   .credentials svg { flex: none; margin-top: 0.2rem; color: var(--field); }
 
@@ -432,7 +430,7 @@
 
   @media (max-width: 900px) {
     .nav-links { display: none; }
-    .coach-inner { grid-template-columns: 1fr; text-align: center; }
+    .coach-person { grid-template-columns: 1fr; text-align: center; }
     .coach-copy p.bio { margin-inline: auto; }
     .credentials { justify-items: center; }
     .final-cta-inner { grid-template-columns: 1fr; }
@@ -557,19 +555,14 @@
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top">
-      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
-        <path d="M16 6 L20 13 L27 14 M16 6 L12 13 L5 14 M16 6 V2M12 13 L16 18 L20 13 M16 18 V26M12 13 L6 18 M20 13 L26 18" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Danely<b>sports</b>
+      <img class="brand-mark" src="assets/logo.png" alt="Danely Sports" />
     </a>
     <ul class="nav-links">
       <li><a href="#grupos">Grupos</a></li>
-      <li><a href="#programas">Programas</a></li>
-      <li><a href="#horarios">Horarios</a></li>
-      <li><a href="#dias-especiales">Días</a></li>
+      <li><a href="#actividades">Actividades</a></li>
+      <li><a href="#dias-especiales">Viernes</a></li>
       <li><a href="#precios">Precios</a></li>
-      <li><a href="#profe">La profe</a></li>
+      <li><a href="#profe">Entrenadores</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
     <a class="btn btn-accent btn-sm" href="https://wa.me/523339684472?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20verano" target="_blank" rel="noopener">Inscribirme</a>
@@ -581,17 +574,17 @@
     <div class="xhero-space">
       <div class="xhero-pin">
         <div class="xhero-bg" id="xheroBg">
-          <img src="https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?q=80&w=1920&auto=format&fit=crop" alt="" />
+          <img src="assets/hero-cancha.jpg" alt="" />
           <div class="xhero-bg-tint"></div>
         </div>
         <div class="xhero-media" id="xheroMedia">
-          <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=1280&auto=format&fit=crop" alt="Niños jugando fútbol en un curso de verano de Danelysports" />
+          <img src="assets/hero-paracaidas.jpg" alt="Niños jugando en un curso de verano de Danelysports" />
           <div class="xhero-media-tint"></div>
         </div>
         <div class="xhero-title">
-          <p class="xhero-eyebrow" id="xheroEyebrow">Cursos de verano · 4 a 6 años</p>
-          <h1><span class="word" id="xheroWordA">Sus</span><span class="word" id="xheroWordB">Primeros&nbsp;Pasos</span></h1>
-          <p class="xhero-hint" id="xheroHint">Desliza para conocer los grupos ↓</p>
+          <p class="xhero-eyebrow" id="xheroEyebrow">13 de julio – 21 de agosto · Niñas y niños de 4 a 13 años</p>
+          <h1><span class="word" id="xheroWordA">Danely</span><span class="word" id="xheroWordB">Sports</span></h1>
+          <p class="xhero-hint" id="xheroHint">Desliza para conocer el curso ↓</p>
         </div>
       </div>
     </div>
@@ -604,50 +597,44 @@
           <p class="eyebrow">Nuestros grupos</p>
           <h2>Grupos por edad,<br>no por deporte</h2>
         </div>
-        <p>Los niños de 4 a 6 años practican fútbol, básquet, vóley, natación y atletismo juntos, agrupados por edad y no por disciplina. Cada grupo tiene un nombre propio —inspirado en las selecciones del mundial— solo para identificarlo: aquí nadie compite contra nadie. Cursos de 4 a 6 semanas.</p>
+        <p>Los niños de 4 a 13 años participan juntos en todas las actividades, agrupados por edad y no por disciplina. Cada grupo tiene un nombre propio —inspirado en las selecciones del mundial— solo para identificarlo: aquí nadie compite contra nadie.</p>
       </div>
       <div class="card-grid team-grid">
 
         <article class="sport-card team-card" style="--team: linear-gradient(90deg, #0055A4, #FFFFFF 50%, #EF4135 50%);">
           <span class="team-stripe"></span>
           <h3>Francia</h3>
-          <div class="sport-meta"><span class="pill">4–6 años</span><span class="pill">4–6 semanas</span></div>
-          <p>Lun y Mié · 9:00–10:00 · Sede Norte</p>
+          <div class="sport-meta"><span class="pill">4–13 años</span></div>
         </article>
 
         <article class="sport-card team-card" style="--team: linear-gradient(90deg, #75AADB, #FFFFFF 55%);">
           <span class="team-stripe"></span>
           <h3>Argentina</h3>
-          <div class="sport-meta"><span class="pill">4–6 años</span><span class="pill">4–6 semanas</span></div>
-          <p>Mar y Jue · 9:00–10:00 · Sede Norte</p>
+          <div class="sport-meta"><span class="pill">4–13 años</span></div>
         </article>
 
         <article class="sport-card team-card" style="--team: linear-gradient(90deg, #009C3B, #FFDF00 55%);">
           <span class="team-stripe"></span>
           <h3>Brasil</h3>
-          <div class="sport-meta"><span class="pill">4–6 años</span><span class="pill">4–6 semanas</span></div>
-          <p>Lun y Mié · 10:15–11:15 · Sede Norte</p>
+          <div class="sport-meta"><span class="pill">4–13 años</span></div>
         </article>
 
         <article class="sport-card team-card" style="--team: linear-gradient(90deg, #AA151B, #F1BF00 55%);">
           <span class="team-stripe"></span>
           <h3>España</h3>
-          <div class="sport-meta"><span class="pill">4–6 años</span><span class="pill">4–6 semanas</span></div>
-          <p>Mar y Jue · 10:15–11:15 · Sede Norte</p>
+          <div class="sport-meta"><span class="pill">4–13 años</span></div>
         </article>
 
         <article class="sport-card team-card" style="--team: linear-gradient(90deg, #000000, #DD0000 45%, #FFCE00 90%);">
           <span class="team-stripe"></span>
           <h3>Alemania</h3>
-          <div class="sport-meta"><span class="pill">4–6 años</span><span class="pill">4–6 semanas</span></div>
-          <p>Vie · 9:00–11:00 · Sede Centro</p>
+          <div class="sport-meta"><span class="pill">4–13 años</span></div>
         </article>
 
         <article class="sport-card team-card" style="--team: linear-gradient(90deg, #008C45, #FFFFFF 50%, #CD212A 90%);">
           <span class="team-stripe"></span>
           <h3>Italia</h3>
-          <div class="sport-meta"><span class="pill">4–6 años</span><span class="pill">4–6 semanas</span></div>
-          <p>Sáb · 9:00–11:00 · Sede Centro</p>
+          <div class="sport-meta"><span class="pill">4–13 años</span></div>
         </article>
 
       </div>
@@ -656,74 +643,72 @@
 
   <hr class="divider">
 
-  <section id="programas" class="programs">
+  <section id="actividades" class="activities">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Programas</p>
-          <h2>Elige tu disciplina,<br>gana tu camiseta</h2>
+          <p class="eyebrow">Actividades</p>
+          <h2>Todo esto,<br>en un solo curso</h2>
         </div>
-        <p>Grupos reducidos organizados por edad y nivel. Cada deportista se lleva su propio número de camiseta el primer día.</p>
+        <p>Cada semana combina deporte, juego y creatividad. Todas las actividades están incluidas en la inscripción, sin costo extra.</p>
       </div>
-      <div class="card-grid">
+      <div class="card-grid activity-grid">
 
-        <article class="sport-card">
-          <div class="jersey">10</div>
+        <article class="activity-card">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7l4 3-1.5 4.5h-5L8 10z"/><path d="M12 3v4M4.5 8.5 8 10M4.5 15.5 8 14.5M19.5 8.5 16 10M19.5 15.5 16 14.5M12 21v-4"/></svg></div>
           <h3>Fútbol</h3>
-          <div class="sport-meta"><span class="pill">6–14 años</span><span class="pill">Lun · Mié · Vie</span></div>
-          <p>Técnica individual, juego posicional y partidos cada semana en cancha de césped sintético.</p>
         </article>
 
-        <article class="sport-card">
-          <div class="jersey">23</div>
+        <article class="activity-card">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M6 6c2 2 3 4 3 6s-1 4-3 6M18 6c-2 2-3 4-3 6s1 4 3 6"/></svg></div>
+          <h3>Béisbol</h3>
+        </article>
+
+        <article class="activity-card">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8.5" cy="9" r="3"/><circle cx="16" cy="10.5" r="2.4"/><path d="M3 20c.4-3 2.5-5 5.5-5s5.1 2 5.5 5M14 20c.3-2.3 1.8-4 4-4s3.7 1.7 4 4"/></svg></div>
+          <h3>Recreación</h3>
+        </article>
+
+        <article class="activity-card">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg></div>
           <h3>Básquetbol</h3>
-          <div class="sport-meta"><span class="pill">8–16 años</span><span class="pill">Mar · Jue</span></div>
-          <p>Fundamentos de dribleo, tiro y defensa, con torneo interno en la última semana del curso.</p>
         </article>
 
-        <article class="sport-card">
-          <div class="jersey">4</div>
-          <h3>Vóleibol</h3>
-          <div class="sport-meta"><span class="pill">9–16 años</span><span class="pill">Lun · Mié</span></div>
-          <p>Saque, recepción y armado de jugadas para equipos mixtos de todos los niveles.</p>
+        <article class="activity-card">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><path d="M20 5 8.5 13.2M9 10.8 20 19M13 12l7-1"/></svg></div>
+          <h3>Manualidades</h3>
         </article>
 
-        <article class="sport-card">
-          <div class="jersey">1</div>
-          <h3>Natación</h3>
-          <div class="sport-meta"><span class="pill">5–12 años</span><span class="pill">Mar · Jue · Sáb</span></div>
-          <p>Del primer chapuzón a los cuatro estilos, con instructores certificados en salvamento.</p>
+        <article class="activity-card">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="8.5" cy="8.5" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="8.5" r="1" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="8.5" cy="15.5" r="1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Juegos de mesa</h3>
         </article>
 
-        <article class="sport-card">
-          <div class="jersey">9</div>
-          <h3>Atletismo</h3>
-          <div class="sport-meta"><span class="pill">7–16 años</span><span class="pill">Vie · Sáb</span></div>
-          <p>Velocidad, salto y resistencia con ejercicios adaptados al crecimiento de cada edad.</p>
+        <article class="activity-card activity-card-more">
+          <div class="activity-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="5.5" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="18.5" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+          <h3>Y más</h3>
         </article>
 
       </div>
     </div>
   </section>
 
-  <section id="horarios">
+  <section id="horarios" class="info-strip">
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Horarios</p>
-          <h2>Así se ve una<br>semana de verano</h2>
+          <p class="eyebrow">El curso</p>
+          <h2>Lo esencial,<br>de un vistazo</h2>
         </div>
-        <p>Tres franjas horarias por grupo de edad. Todas las sedes están a pocos minutos del centro.</p>
+        <p>Los datos clave del curso de verano, en un solo lugar.</p>
       </div>
       <div class="schedule-board">
         <table>
-          <thead>
-            <tr><th>Grupo</th><th>Edad</th><th>Días</th><th>Horario</th><th>Sede</th></tr>
-          </thead>
           <tbody>
-            <tr><td>Mini</td><td>5–7 años</td><td>Lun, Mié, Vie</td><td>9:00–10:30</td><td>Sede Norte</td></tr>
-            <tr><td>Junior</td><td>8–11 años</td><td>Lun a Vie</td><td>10:45–12:30</td><td>Sede Norte</td></tr>
-            <tr><td>Senior</td><td>12–16 años</td><td>Mar, Jue, Sáb</td><td>16:00–18:00</td><td>Sede Centro</td></tr>
+            <tr><td>Fechas</td><td>13 de julio – 21 de agosto</td></tr>
+            <tr><td>Edades</td><td>Niñas y niños de 4 a 13 años</td></tr>
+            <tr><td>Modalidad</td><td>Semanas flexibles, de 1 a 6 semanas</td></tr>
+            <tr><td>Sede</td><td>Atlas del Sol — La Giralda #110, Loma Bonita, Zapopan</td></tr>
           </tbody>
         </table>
       </div>
@@ -734,43 +719,54 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Días especiales</p>
+          <p class="eyebrow">Viernes temáticos</p>
           <h2>Rompemos la rutina<br>cada semana</h2>
         </div>
-        <p>Además de sus entrenamientos, todos los grupos disfrutan de estos días temáticos durante el verano, para niños de 4 a 12 años.</p>
+        <p>Cada viernes cierra la semana con una actividad especial, para niñas y niños de 4 a 13 años.</p>
       </div>
       <div class="card-grid day-grid">
 
         <article class="day-card">
           <div class="day-card-media">
-            <img src="https://images.pexels.com/photos/6379672/pexels-photo-6379672.jpeg?q=80&w=900&auto=compress&cs=tinysrgb" alt="Brincolín inflable para el día acuático" loading="lazy" />
+            <img src="assets/dia-acuatico.jpg" alt="Niñas jugando en el brincolín acuático de Danelysports" loading="lazy" />
           </div>
           <div class="day-card-body">
             <h3>Día Acuático</h3>
-            <div class="sport-meta"><span class="pill">4–12 años</span></div>
-            <p>Brincolín acuático y juegos con agua para refrescar las tardes más calurosas del verano.</p>
+            <div class="sport-meta"><span class="pill">4–13 años</span></div>
+            <p>Brincolines acuáticos para refrescar las tardes más calurosas del verano.</p>
           </div>
         </article>
 
         <article class="day-card">
           <div class="day-card-media">
-            <img src="https://images.pexels.com/photos/33020517/pexels-photo-33020517.jpeg?q=80&w=900&auto=compress&cs=tinysrgb" alt="Niño jugando un juego de feria para ganar un premio" loading="lazy" />
+            <img src="assets/dia-feria.jpg" alt="Mesa de premios del día de feria en Danelysports" loading="lazy" />
           </div>
           <div class="day-card-body">
             <h3>Día de Feria</h3>
-            <div class="sport-meta"><span class="pill">4–12 años</span></div>
+            <div class="sport-meta"><span class="pill">4–13 años</span></div>
             <p>Juegos de feria con premios: cada niño se lleva un juguete a casa.</p>
           </div>
         </article>
 
         <article class="day-card">
           <div class="day-card-media">
-            <img src="https://images.pexels.com/photos/38563802/pexels-photo-38563802.jpeg?q=80&w=900&auto=compress&cs=tinysrgb" alt="Niños en la línea de salida de un rally deportivo" loading="lazy" />
+            <img src="assets/rally-equipos.jpg" alt="Niños corriendo en el rally por equipos de Danelysports" loading="lazy" />
           </div>
           <div class="day-card-body">
-            <h3>Día de Rally</h3>
-            <div class="sport-meta"><span class="pill">4–12 años</span></div>
+            <h3>Rally por Equipos</h3>
+            <div class="sport-meta"><span class="pill">4–13 años</span></div>
             <p>Circuito de retos y carreras por equipos para cerrar la semana con energía.</p>
+          </div>
+        </article>
+
+        <article class="day-card">
+          <div class="day-card-media">
+            <img src="https://images.pexels.com/photos/8421949/pexels-photo-8421949.jpeg?q=80&w=900&auto=compress&cs=tinysrgb" alt="Niños disfrazados jugando" loading="lazy" />
+          </div>
+          <div class="day-card-body">
+            <h3>Día de Disfraces</h3>
+            <div class="sport-meta"><span class="pill">4–13 años</span></div>
+            <p>Vienen disfrazados a entrenar: el vestuario más divertido del verano.</p>
           </div>
         </article>
 
@@ -782,73 +778,87 @@
     <div class="wrap">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Inversión</p>
-          <h2>Planes para<br>cada temporada</h2>
+          <p class="eyebrow">Precios</p>
+          <h2>Elige tus<br>semanas</h2>
         </div>
-        <p>Incluyen seguro deportivo, hidratación y evaluación de progreso al cierre del curso.</p>
+        <p>Aparta el lugar con $300 y liquida el resto antes de iniciar. Precio por niño; el segundo hermano en adelante tiene descuento.</p>
       </div>
-      <div class="pricing-grid">
 
-        <div class="plan">
-          <div>
-            <p class="eyebrow">Por sesión</p>
-            <h3>Prueba libre</h3>
-          </div>
-          <div class="price"><b>$8</b><span>/ clase</span></div>
+      <div class="schedule-board price-board">
+        <table>
+          <thead>
+            <tr><th>Semanas</th><th>1 niño</th><th>2 o más niños</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 semana</td><td>$650</td><td>$600</td></tr>
+            <tr><td>2 semanas</td><td>$1,300</td><td>$1,200</td></tr>
+            <tr><td>3 semanas</td><td>$1,950</td><td>$1,800</td></tr>
+            <tr><td>4 semanas</td><td>$2,600</td><td>$2,400</td></tr>
+            <tr><td>5 semanas</td><td>$3,250</td><td>$3,000</td></tr>
+            <tr><td>6 semanas</td><td>$3,900</td><td>$3,600</td></tr>
+            <tr><td>6 semanas · pago único en efectivo</td><td>$3,500</td><td>$3,400</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="price-notes">
+        <div class="price-note">
+          <h3>Descuentos extra</h3>
           <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Sin compromiso de permanencia</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Elige cualquier disciplina</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Ideal para conocer el programa</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>$100 por cada niño nuevo recomendado que se inscriba.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Si tienes 3 o más veranos con nosotros, pregunta por tu descuento.</li>
           </ul>
-          <a class="btn btn-ghost" href="https://wa.me/523339684472" target="_blank" rel="noopener">Reservar clase</a>
         </div>
-
-        <div class="plan featured">
-          <span class="plan-tag">Más elegido</span>
-          <div>
-            <p class="eyebrow">Plan mensual</p>
-            <h3>Temporada activa</h3>
-          </div>
-          <div class="price"><b>$70</b><span>/ mes</span></div>
+        <div class="price-note">
+          <h3>Formas de pago</h3>
           <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Hasta 3 sesiones por semana</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Camiseta oficial incluida</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Reporte de progreso mensual</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Aparta tu lugar con $300 y liquida antes de iniciar el curso.</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Pagos con tarjeta o transferencia tienen un 10% extra.</li>
           </ul>
-          <a class="btn btn-accent" href="https://wa.me/523339684472" target="_blank" rel="noopener">Inscribirme</a>
         </div>
+      </div>
 
-        <div class="plan">
-          <div>
-            <p class="eyebrow">Temporada completa</p>
-            <h3>Verano completo</h3>
-          </div>
-          <div class="price"><b>$240</b><span>/ 8 semanas</span></div>
-          <ul>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Ahorra frente al plan mensual</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Cupo garantizado en torneo final</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5 11-11"/></svg>Kit deportivo completo</li>
-          </ul>
-          <a class="btn btn-ghost" href="https://wa.me/523339684472" target="_blank" rel="noopener">Reservar temporada</a>
-        </div>
-
+      <div class="price-cta">
+        <a class="btn btn-accent" href="https://wa.me/523339684472?text=Hola%2C%20quiero%20apartar%20el%20lugar%20de%20mi%20hijo%2Fa%20en%20el%20curso%20de%20verano" target="_blank" rel="noopener">Apartar mi lugar</a>
       </div>
     </div>
   </section>
 
   <section id="profe" class="coach">
-    <div class="wrap coach-inner">
-      <div class="monogram">E</div>
-      <div class="coach-copy">
-        <p class="eyebrow">Tu entrenadora</p>
-        <h3>Elizabeth Guevara López</h3>
-        <p class="coach-role">Fundadora de Danelysports</p>
-        <p class="bio">Después de años formando equipos juveniles, Elizabeth creó Danelysports para que cada verano los niños del barrio tengan un lugar seguro donde moverse, hacer amigos y descubrir el deporte que les apasiona.</p>
-        <ul class="credentials">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Licenciada en Cultura Física y Deportes</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Certificación en primeros auxilios pediátricos</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>+6 años formando deportistas infantiles</li>
-        </ul>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Tus entrenadores</p>
+          <h2>Quiénes cuidan<br>a tus hijos</h2>
+        </div>
+      </div>
+      <div class="coach-grid">
+
+        <article class="coach-person">
+          <div class="monogram">E</div>
+          <div class="coach-copy">
+            <h3>Elizabeth Guevara López</h3>
+            <p class="coach-role">Fundadora de Danelysports</p>
+            <p class="bio">Después de años formando equipos juveniles, Elizabeth creó Danelysports para que cada verano los niños del barrio tengan un lugar seguro donde moverse, hacer amigos y descubrir el deporte que les apasiona.</p>
+            <ul class="credentials">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Licenciada en Cultura Física y Deporte</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>+6 años formando deportistas infantiles</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="coach-person">
+          <div class="monogram">D</div>
+          <div class="coach-copy">
+            <h3>Daniel</h3>
+            <p class="coach-role">Entrenador de Danelysports</p>
+            <p class="bio">Junto a Elizabeth, Daniel coordina las actividades del día a día y le pone toda la energía a los viernes temáticos y el rally por equipos.</p>
+            <ul class="credentials">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12l5 5 11-11"/></svg>Licenciado en Cultura Física y Deporte</li>
+            </ul>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -864,18 +874,18 @@
       <div class="testi-grid">
         <figure class="testi">
           <span class="quote-mark">“</span>
-          <p>Mi hijo llegaba agotado y feliz todos los días. Se nota que las profes cuidan a cada niño de verdad.</p>
-          <footer>— Mamá de Mateo, grupo Junior</footer>
+          <p>Mi hijo llegaba agotado y feliz todos los días. Se nota que Elizabeth y Daniel cuidan a cada niño de verdad.</p>
+          <footer>— Mamá de Mateo, grupo Brasil</footer>
         </figure>
         <figure class="testi">
           <span class="quote-mark">“</span>
-          <p>Empezó sin saber nadar y terminó el verano nadando los cuatro estilos. Increíble el progreso.</p>
-          <footer>— Papá de Valentina, grupo Mini</footer>
+          <p>El día de disfraces fue lo que más le gustó a mi hija de todo el verano. Llegaba emocionada desde el lunes.</p>
+          <footer>— Papá de Valentina, grupo Francia</footer>
         </figure>
         <figure class="testi">
           <span class="quote-mark">“</span>
-          <p>Los horarios flexibles nos salvaron el verano y el torneo final fue la mejor tarde de la temporada.</p>
-          <footer>— Mamá de Rodrigo, grupo Senior</footer>
+          <p>Las semanas flexibles nos salvaron el verano y el rally por equipos fue la mejor tarde de la temporada.</p>
+          <footer>— Mamá de Rodrigo, grupo Argentina</footer>
         </figure>
       </div>
     </div>
@@ -886,20 +896,20 @@
       <div class="final-cta">
         <div class="final-cta-inner">
           <div>
-            <h2>¿Lista la playera?<br>Reserva su cupo</h2>
-            <p>Cupos limitados por grupo de edad. Escríbenos y te ayudamos a elegir la disciplina y el horario ideal.</p>
+            <h2>¿Listo el uniforme?<br>Reserva su lugar</h2>
+            <p>Cupos limitados. Escríbenos y te ayudamos con la inscripción y cualquier duda sobre el curso.</p>
             <ul class="contact-list">
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5z"/></svg>33 3968 4472</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg>hola@danelysports.com</li>
-              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Complejo Deportivo Municipal, Sede Norte</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5z"/></svg>Elizabeth · 33 3968 4472</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 0 1 2-2h3l2 5-2 1a11 11 0 0 0 5 5l1-2 5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 3 5z"/></svg>Daniel · 33 2164 1202</li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Atlas del Sol — La Giralda #110, Loma Bonita, Zapopan</li>
             </ul>
           </div>
           <div class="final-actions">
-            <a class="btn btn-accent" href="https://wa.me/523339684472?text=Hola%2C%20quiero%20inscribir%20a%20mi%20hijo%2Fa%20en%20los%20cursos%20de%20verano" target="_blank" rel="noopener">
+            <a class="btn btn-accent" href="https://wa.me/523339684472?text=Hola%2C%20quiero%20inscribir%20a%20mi%20hijo%2Fa%20en%20el%20curso%20de%20verano" target="_blank" rel="noopener">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.45.05-.98.24-3.3-.7-2.83-1.17-4.63-3.98-4.77-4.17-.14-.19-1.14-1.5-1.14-2.86 0-1.36.71-2.03.96-2.3.25-.28.55-.35.73-.35h.53c.17 0 .4-.03.62.47.23.55.78 1.9.85 2.03.07.14.11.3.02.48-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.17.28.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.38-.23.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.15 1.31z"/></svg>
-              Escribir por WhatsApp
+              Escribir a Elizabeth
             </a>
-            <a class="btn btn-ghost" style="border-color: rgba(234,243,250,0.3); color: #EAF3FA;" href="mailto:hola@danelysports.com">Escribir un correo</a>
+            <a class="btn btn-ghost" style="border-color: rgba(234,243,250,0.3); color: #EAF3FA;" href="https://wa.me/523321641202?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20verano" target="_blank" rel="noopener">Escribir a Daniel</a>
           </div>
         </div>
       </div>
@@ -910,11 +920,7 @@
 <footer class="site">
   <div class="wrap">
     <a class="brand" href="#top">
-      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
-        <path d="M16 6 L20 13 L27 14 M16 6 L12 13 L5 14 M16 6 V2M12 13 L16 18 L20 13 M16 18 V26M12 13 L6 18 M20 13 L26 18" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      Danely<b>sports</b>
+      <img class="brand-mark" src="assets/logo.png" alt="Danely Sports" />
     </a>
     <p>© 2026 Danelysports. Todos los derechos reservados.</p>
   </div>
