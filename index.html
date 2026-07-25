@@ -104,7 +104,8 @@
     position: sticky;
     top: 0;
     z-index: 40;
-    background: color-mix(in srgb, var(--bg) 96%, transparent);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--line);
   }
   .nav .wrap {
@@ -461,13 +462,7 @@
     height: 100%;
     object-fit: cover;
   }
-  .xhero-bg {
-    z-index: 0;
-    will-change: opacity;
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
+  .xhero-bg { z-index: 0; will-change: opacity; }
   .xhero-bg-tint {
     position: absolute;
     inset: 0;
@@ -480,13 +475,10 @@
     height: 340px;
     max-width: 94vw;
     max-height: 82vh;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
-    will-change: transform;
-    transform-origin: center center;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    will-change: width, height;
   }
   .xhero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .xhero-media-tint { position: absolute; inset: 0; background: rgba(10, 26, 40, 0.3); }
@@ -987,38 +979,24 @@
   function clamp(v, a, b) { return Math.min(Math.max(v, a), b); }
   function isMobile() { return window.innerWidth < 768; }
 
-  var startW = 300, startH = 340;
-  var finalW = startW, finalH = startH;
-  var startScaleX = 1, startScaleY = 1;
-
-  function layout() {
-    var mobile = isMobile();
-    var maxW = Math.min(1180, window.innerWidth * (mobile ? 0.92 : 0.94));
-    finalW = Math.min(startW + (mobile ? 520 : 900), maxW);
-    finalH = startH + (mobile ? 260 : 420);
-    media.style.width = finalW + 'px';
-    media.style.height = finalH + 'px';
-    startScaleX = startW / finalW;
-    startScaleY = startH / finalH;
-  }
-
   function paint(p) {
     var mobile = isMobile();
-    var scaleX = startScaleX + p * (1 - startScaleX);
-    var scaleY = startScaleY + p * (1 - startScaleY);
-    media.style.transform = 'scale(' + scaleX.toFixed(4) + ',' + scaleY.toFixed(4) + ') translateZ(0)';
+    var maxW = Math.min(1180, window.innerWidth * (mobile ? 0.92 : 0.94));
+    var w = Math.min(300 + p * (mobile ? 520 : 900), maxW);
+    var h = 340 + p * (mobile ? 260 : 420);
+    media.style.width = w + 'px';
+    media.style.height = h + 'px';
+    media.style.borderRadius = (24 - p * 10) + 'px';
 
     var shift = p * (mobile ? 40 : 48);
-    wordA.style.transform = 'translateX(-' + shift + 'vw) translateZ(0)';
-    wordB.style.transform = 'translateX(' + shift + 'vw) translateZ(0)';
+    wordA.style.transform = 'translateX(-' + shift + 'vw)';
+    wordB.style.transform = 'translateX(' + shift + 'vw)';
 
     var textFade = 1 - clamp(p / 0.55, 0, 1);
     eyebrow.style.opacity = textFade;
     hint.style.opacity = textFade;
     bg.style.opacity = 1 - p * 0.55;
   }
-
-  layout();
 
   if (reduceMotion) {
     space.style.height = '100vh';
@@ -1040,13 +1018,9 @@
       ticking = true;
     }
   }
-  function onResize() {
-    layout();
-    update();
-  }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onResize);
+  window.addEventListener('resize', onScroll);
   update();
 })();
 </script>
