@@ -30,51 +30,6 @@
     color-scheme: light;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #0E1A2B;
-      --bg-alt: #15243A;
-      --ink: #EAF2FF;
-      --ink-soft: #A7B7CE;
-      --field: #22C6D6;
-      --field-deep: #0B4750;
-      --accent: #6C93FF;
-      --accent-ink: #DCE6FF;
-      --chalk: #FFB84D;
-      --line: rgba(234, 242, 255, 0.14);
-      --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 28px -14px rgba(0, 0, 0, 0.5);
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #0E1A2B;
-    --bg-alt: #15243A;
-    --ink: #EAF2FF;
-    --ink-soft: #A7B7CE;
-    --field: #22C6D6;
-    --field-deep: #0B4750;
-    --accent: #6C93FF;
-    --accent-ink: #DCE6FF;
-    --chalk: #FFB84D;
-    --line: rgba(234, 242, 255, 0.14);
-    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 16px 28px -14px rgba(0, 0, 0, 0.5);
-    color-scheme: dark;
-  }
-  :root[data-theme="light"] {
-    --bg: #FFFFFF;
-    --bg-alt: #F7F8FB;
-    --ink: #1B2D6B;
-    --ink-soft: #5C6478;
-    --field: #16A6C4;
-    --field-deep: #0E5E85;
-    --accent: #2F6FE0;
-    --accent-ink: #16327A;
-    --chalk: #FF9E1F;
-    --line: rgba(27, 45, 107, 0.12);
-    --card-shadow: 0 1px 2px rgba(27, 45, 107, 0.05), 0 12px 24px -12px rgba(27, 45, 107, 0.16);
-    color-scheme: light;
-  }
-
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
@@ -289,7 +244,6 @@
     background: color-mix(in srgb, var(--field) 14%, transparent);
     color: var(--field);
   }
-  @media (prefers-color-scheme: dark) { .pill { color: color-mix(in srgb, var(--field) 60%, white); } }
   .sport-card > p { color: var(--ink-soft); font-size: 0.94rem; }
 
   /* ---------- SCHEDULE ---------- */
