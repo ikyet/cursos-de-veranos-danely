@@ -104,8 +104,7 @@
     position: sticky;
     top: 0;
     z-index: 40;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--bg) 96%, transparent);
     border-bottom: 1px solid var(--line);
   }
   .nav .wrap {
@@ -462,7 +461,13 @@
     height: 100%;
     object-fit: cover;
   }
-  .xhero-bg { z-index: 0; will-change: opacity; }
+  .xhero-bg {
+    z-index: 0;
+    will-change: opacity;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
   .xhero-bg-tint {
     position: absolute;
     inset: 0;
@@ -480,6 +485,8 @@
     box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
     will-change: transform;
     transform-origin: center center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
   .xhero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .xhero-media-tint { position: absolute; inset: 0; background: rgba(10, 26, 40, 0.3); }
@@ -944,7 +951,10 @@
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.45.05-.98.24-3.3-.7-2.83-1.17-4.63-3.98-4.77-4.17-.14-.19-1.14-1.5-1.14-2.86 0-1.36.71-2.03.96-2.3.25-.28.55-.35.73-.35h.53c.17 0 .4-.03.62.47.23.55.78 1.9.85 2.03.07.14.11.3.02.48-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.17.28.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.38-.23.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.15 1.31z"/></svg>
               Escribir a Elizabeth
             </a>
-            <a class="btn btn-ghost" style="border-color: rgba(234,243,250,0.3); color: #EAF3FA;" href="https://wa.me/523321641202?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20curso%20de%20verano" target="_blank" rel="noopener">Escribir a Daniel</a>
+            <a class="btn btn-accent" href="https://wa.me/523321641202?text=Hola%2C%20tengo%20una%20duda%20sobre%20el%20curso%20de%20verano." target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.45.05-.98.24-3.3-.7-2.83-1.17-4.63-3.98-4.77-4.17-.14-.19-1.14-1.5-1.14-2.86 0-1.36.71-2.03.96-2.3.25-.28.55-.35.73-.35h.53c.17 0 .4-.03.62.47.23.55.78 1.9.85 2.03.07.14.11.3.02.48-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.17.28.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.38-.23.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.15 1.31z"/></svg>
+              Escribir a Daniel
+            </a>
           </div>
         </div>
       </div>
@@ -996,11 +1006,11 @@
     var mobile = isMobile();
     var scaleX = startScaleX + p * (1 - startScaleX);
     var scaleY = startScaleY + p * (1 - startScaleY);
-    media.style.transform = 'scale(' + scaleX.toFixed(4) + ',' + scaleY.toFixed(4) + ')';
+    media.style.transform = 'scale(' + scaleX.toFixed(4) + ',' + scaleY.toFixed(4) + ') translateZ(0)';
 
     var shift = p * (mobile ? 40 : 48);
-    wordA.style.transform = 'translateX(-' + shift + 'vw)';
-    wordB.style.transform = 'translateX(' + shift + 'vw)';
+    wordA.style.transform = 'translateX(-' + shift + 'vw) translateZ(0)';
+    wordB.style.transform = 'translateX(' + shift + 'vw) translateZ(0)';
 
     var textFade = 1 - clamp(p / 0.55, 0, 1);
     eyebrow.style.opacity = textFade;
