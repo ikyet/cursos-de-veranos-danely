@@ -341,6 +341,51 @@
   .price-note li svg { flex: none; margin-top: 0.2rem; color: var(--field); }
   .price-cta { display: flex; justify-content: center; }
 
+  /* ---------- SIGNUP FORM ---------- */
+  .form-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    box-shadow: var(--card-shadow);
+  }
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+  }
+  .field { display: flex; flex-direction: column; gap: 0.45rem; }
+  .field label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .field input, .field select {
+    appearance: none;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1.5px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  .field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C6478' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-size: 16px;
+    padding-right: 2.5rem;
+  }
+  .field input:focus, .field select:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .form-actions { margin-top: 1.75rem; display: flex; justify-content: center; }
+
   /* ---------- COACH ---------- */
   .coach { background: var(--bg-alt); }
   .coach-grid {
@@ -562,10 +607,11 @@
       <li><a href="#actividades">Actividades</a></li>
       <li><a href="#dias-especiales">Viernes</a></li>
       <li><a href="#precios">Precios</a></li>
+      <li><a href="#inscripcion">Inscripción</a></li>
       <li><a href="#profe">Entrenadores</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
-    <a class="btn btn-accent btn-sm" href="https://wa.me/523339684472?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20cursos%20de%20verano" target="_blank" rel="noopener">Inscribirme</a>
+    <a class="btn btn-accent btn-sm" href="#inscripcion">Inscribirme</a>
   </div>
 </header>
 
@@ -819,8 +865,64 @@
       </div>
 
       <div class="price-cta">
-        <a class="btn btn-accent" href="https://wa.me/523339684472?text=Hola%2C%20quiero%20apartar%20el%20lugar%20de%20mi%20hijo%2Fa%20en%20el%20curso%20de%20verano" target="_blank" rel="noopener">Apartar mi lugar</a>
+        <a class="btn btn-accent" href="#inscripcion">Apartar mi lugar</a>
       </div>
+    </div>
+  </section>
+
+  <section id="inscripcion" class="signup">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Inscripción</p>
+          <h2>Reserva el<br>lugar de tu hijo/a</h2>
+        </div>
+        <p>Llena estos datos y te los mandamos listos por WhatsApp a Elizabeth. Ella te contacta para confirmar el pago y el cupo.</p>
+      </div>
+
+      <form class="form-card" id="signupForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="fChildName">Nombre del menor</label>
+            <input type="text" id="fChildName" name="childName" required>
+          </div>
+          <div class="field">
+            <label for="fChildAge">Edad del menor</label>
+            <input type="number" id="fChildAge" name="childAge" min="4" max="13" required>
+          </div>
+          <div class="field">
+            <label for="fChildDob">Fecha de nacimiento del menor</label>
+            <input type="date" id="fChildDob" name="childDob" required>
+          </div>
+          <div class="field">
+            <label for="fWeeks">¿Cuántas semanas se inscribe?</label>
+            <select id="fWeeks" name="weeks" required>
+              <option value="" disabled selected>Elige una opción</option>
+              <option value="1 semana">1 semana</option>
+              <option value="2 semanas">2 semanas</option>
+              <option value="3 semanas">3 semanas</option>
+              <option value="4 semanas">4 semanas</option>
+              <option value="5 semanas">5 semanas</option>
+              <option value="6 semanas">6 semanas</option>
+              <option value="6 semanas · pago único en efectivo">6 semanas · pago único en efectivo</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="fParentName">Nombre del padre, madre o tutor</label>
+            <input type="text" id="fParentName" name="parentName" required>
+          </div>
+          <div class="field">
+            <label for="fParentPhone">Teléfono del padre, madre o tutor</label>
+            <input type="tel" id="fParentPhone" name="parentPhone" inputmode="tel" placeholder="33 1234 5678" required>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-accent">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.2c-.22.62-1.28 1.2-1.77 1.24-.45.05-.98.24-3.3-.7-2.83-1.17-4.63-3.98-4.77-4.17-.14-.19-1.14-1.5-1.14-2.86 0-1.36.71-2.03.96-2.3.25-.28.55-.35.73-.35h.53c.17 0 .4-.03.62.47.23.55.78 1.9.85 2.03.07.14.11.3.02.48-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.17.28.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.33 1.44.28.14.44.12.6-.07.17-.19.71-.83.9-1.11.19-.28.38-.23.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.53.33.07.12.07.68-.15 1.31z"/></svg>
+            Enviar por WhatsApp
+          </button>
+        </div>
+      </form>
     </div>
   </section>
 
@@ -985,5 +1087,38 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', onScroll);
   update();
+})();
+</script>
+
+<script>
+(function () {
+  var form = document.getElementById('signupForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new FormData(form);
+
+    var dob = data.get('childDob');
+    var dobFormatted = dob;
+    var parts = (dob || '').split('-');
+    if (parts.length === 3) {
+      dobFormatted = parts[2] + '/' + parts[1] + '/' + parts[0];
+    }
+
+    var lines = [
+      'Hola, quiero inscribir a mi hijo/a en el curso de verano de Danelysports.',
+      '',
+      'Nombre del menor: ' + data.get('childName'),
+      'Edad del menor: ' + data.get('childAge') + ' años',
+      'Fecha de nacimiento: ' + dobFormatted,
+      'Semanas: ' + data.get('weeks'),
+      'Nombre del padre/madre/tutor: ' + data.get('parentName'),
+      'Teléfono: ' + data.get('parentPhone')
+    ];
+
+    var text = encodeURIComponent(lines.join('\n'));
+    window.open('https://wa.me/523339684472?text=' + text, '_blank', 'noopener');
+  });
 })();
 </script>
